@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.1/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.1/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0-alpha1/JSXTransformer.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="content"></div>
+ <script type="text/jsx">
+     //1. Create a component(class)
+     //2. Instantiate a component(Object)
+
+    class BasicComponent extends React.Component{
+        render(){
+            return(
+                <div>
+                    <h1>Hello react</h1>
+                </div>
+            )
+        }
+    }
+
+    ReactDOM.render(<BasicComponent/>, document.getElementById('content'))  
+     
+ </script>   
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.1/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.1/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0-alpha1/JSXTransformer.js"></script>
+
+    <style>
+        .list{
+            border:2px solid red;
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="content"></div>
+ <script type="text/jsx">
+     //1. Create a component(class)
+     //2. Instantiate a component(Object)
+
+    class BasicComponent extends React.Component{
+        render(){
+            return(
+                <form>
+                    comment:<input type="text"/>
+                    <input type="button" value="Add"/>
+                </form>
+            )
+        }
+    }
+
+    class CommentsListComponent extends React.Component{
+        render(){
+            return(
+                <ul>
+                <li className="list">React is good!</li>
+                <li>Angular is good!</li>
+                <li>Vue is good!</li>                
+                </ul>
+            )
+        }
+    }
+
+    class BlogComponent extends React.Component{
+        render(){
+            return(
+               <div>
+               <BasicComponent />
+                <CommentsListComponent className="lists"/>
+               </div> 
+            )
+        }
+    }
+
+    ReactDOM.render(<BlogComponent/>, document.getElementById('content'))  
+     
+ </script>   
+</body>
+</html>
